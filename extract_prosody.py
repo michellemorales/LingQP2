@@ -60,18 +60,6 @@ def SpeechRate(wav_file):
         rate = 0
     return rate
 
-def LABELS():
-    labels = {}
-    with codecs.open('AVEC2014_DepressionLabels.txt') as f:
-        data = f.readlines()
-    for line in data:
-        items = line.split(',')
-        name = items[0][:5]
-        lab = items[-1].strip()
-        labels[name] = lab
-    return labels
-
-
 
 dir = sys.argv[1]
 arff_name = sys.argv[2]
@@ -91,8 +79,6 @@ for f in prosody_feats:
 arff.write('@attribute label numeric\n')
 arff.write('@data\n')
 
-labels = LABELS()
-# dir = 'Freeform_WavOnly/'
 files = [f for f in sorted(os.listdir(dir)) if f.endswith('.wav')]
 for f in files:
     name = f[:5]

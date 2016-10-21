@@ -61,29 +61,23 @@ def SpeechRate(wav_file):
     return rate
 
 
-dir = sys.argv[1]
-arff_name = sys.argv[2]
-split = arff_name.lower()[:3]
-# arff_name = 'train_prosodyModel.arff'
-arff = open(arff_name,'w')
-arff.write('@Relation ProsodyModel\n')
-arff.write('@attribute name string\n')
-arff.write('@attribute speechRate numeric\n')
 
-prosody_feats = ['f0','voicing','loudness']
-prosody_stats = 'mean, rms, maximum, minimum, std, skewness, kurtosis, percent1, percent99, percentRange, p1, p50, p90'.split(',')
-for f in prosody_feats:
-    for s in prosody_stats:
-        arff.write('@attribute %s_%s numeric\n'%(f,s.strip()))
 
-arff.write('@attribute label numeric\n')
-arff.write('@data\n')
 
-files = [f for f in sorted(os.listdir(dir)) if f.endswith('.wav')]
-for f in files:
-    name = f[:5]
-    label = labels[name]
-    rate = SpeechRate(dir+'/'+f)
-    prosody = Prosody(dir+'/'+f)
-    instance = "'%s_%s',%s,%s,%s\n" %(split,name,rate,','.join([str(x) for x in prosody]),label)
-    arff.write(instance)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

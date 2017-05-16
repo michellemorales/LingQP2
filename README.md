@@ -7,6 +7,7 @@ Michelle Morales & Rivka Levitan. 2016. Speech vs. Text: A Comparative Analsyis 
 
 If you use this repo in your work. Please use this reference for any citations. Thank you!
 
+```
 @inproceedings{morales2016speech,
   title={Speech vs. text: A comparative analysis of features for depression detection systems},
   author={Morales, Michelle Renee and Levitan, Rivka},
@@ -15,7 +16,7 @@ If you use this repo in your work. Please use this reference for any citations. 
   year={2016},
   organization={IEEE}
 }
-
+```
 
 
 
